@@ -1,17 +1,13 @@
+def say_hello(name, health=100)
+    "I'm #{name.capitalize} with a health of #{health} as of #{time}."
+end
 
-player1 = "larry"
-health1 = 60
+def time
+   current_time = Time.new
+   current_time.strftime("%I:%M:%S")
+end
 
-player2 = "curly"
-health2 = 125
-
-player3 = "moe"
-health3 = 100
-
-player4 = "shemp"
-health4 = 90
-
-puts "#{player1.capitalize} has a health of #{health1}."
-puts "#{player2.upcase} has a health of #{health2}."
-puts "#{player3.capitalize} has a health of #{health3}.".center(50, '*')
-puts "#{player4.capitalize.ljust(30,'.')} #{health4}"
+puts say_hello("larry", 60)
+puts say_hello("curly", 125)
+puts say_hello("moe")
+puts say_hello("shemp", 90)
